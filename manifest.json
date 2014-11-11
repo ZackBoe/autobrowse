@@ -1,0 +1,30 @@
+{
+  "name": "AutoBrowse",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Automatically browse to random sites for a specified time",
+  "homepage_url": "http://zackboehm.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "js/jquery-2.1.1.min.js",
+      "src/bg/background.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "browser action demo",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "management",
+    "tabs",
+    "history"
+  ]
+}

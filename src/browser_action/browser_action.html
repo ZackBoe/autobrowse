@@ -1,0 +1,93 @@
+<!doctype html>
+<style type="text/css">
+  #mainPopup {
+    padding: 10px;
+    height: 200px;
+    width: 400px;
+    font-family: Helvetica, Ubuntu, Arial, sans-serif;
+  }
+  h1 {
+    font-size: 1em;
+  }
+
+  input[type=number] {
+    border: none;
+    font-size: 250%;
+    width: 65px;
+  }
+
+  input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+  }
+
+  h2 {
+    display: inline;
+    padding-left: 10px;
+    font-size: 250%;
+    font-weight: 100;
+  }
+
+  h5 {
+    display: inline;
+    font-weight: 100;
+    font-size: 150%;
+    margin-left: 5px;
+  }
+
+
+
+  /* Dnt h8 */
+  button {
+    position: relative;
+    display: block;
+    width: 250px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #000;
+    font-size: 150%;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transform-style: flat;
+    transition: all 250ms ease-out;
+  }
+  button:before, button:after {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    transition: all 250ms ease-out;
+  }
+
+  /* Paper effect – slightly raised off background */
+  .paper {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+    border-color: #dedede;
+  }
+
+  /* Raised effect – pushes up on hover */
+  .paper-raise:before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .paper-raise:hover {
+    border: 1px solid #666;
+  }
+  .paper-raise:hover:before {
+    box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
+  }
+
+
+</style>
+<script src="../../js/jquery-2.1.1.min.js"></script>
+<script src="browser_action.js"></script>
+<div id="mainPopup">
+<h1>Auto Browse for how many minutes?</h1>
+<input class="minutes" type="number" min="0" max="60" step="1" value="5"><h2>Minutes</h2><br>
+<input type="checkbox" checked="true"><h5>Self Uninstall?</h5>
+<button id="go" class="paper-raise">Begin</button>
+</div>
