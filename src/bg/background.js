@@ -10,12 +10,10 @@ $.getJSON( "../../topsites.json", function( data ) {
 });
 
 chrome.extension.onMessage.addListener(
-  function(request, sender, sendResponse) {
-
+  function(request, sender) {
+    console.log('got message');
     // Super quick 'error' handling.
     //TODO: validation in popup script before message send
-    if(!Number.isInteger(request.mins)) chrome.runtime.reload();
-
     //TODO: Inform popup we're doing stuff
     browsing = true;
 
